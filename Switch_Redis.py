@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import redis
-from packOSC import bank, release, valueB
+from packOSC import bank, release, valueB1, valueB2, valueB3, valueB4
 
 client = redis.StrictRedis(host = 'localhost', port = 6379, db = 1)
 # key为不同传感器对应的IP
@@ -84,28 +84,39 @@ while True:
         if status_1_Open == Timestep:
             print("1:Status_Button_Press")
             status_1_Close = 0
-            valueB(0)
+            valueB1(0)
+
         if status_2_Open == Timestep:
             print("2:Status_Button_Press")
             status_2_Close = 0
-            valueB(1)
+            valueB2(0)
+
         if status_3_Open == Timestep:
             print("3:Status_Laser_Shelter")
             status_3_Close = 0
+            valueB3(0)
+
         if status_4_Open == Timestep:
             print("4:Status_Laser_Shelter")
             status_4_Close = 0
+            valueB4(0)
 
         if status_1_Close == Timestep:
             release()
             print("1:Status_Button_Open")
             status_1_Open = 0
+            valueB1(1)
+
         if status_2_Close == Timestep:
             print("2:Status_Button_Open")
             status_2_Open = 0
+            valueB2(1)
+
         if status_3_Close == Timestep:
             print("3:Status_Laser_Shine")
             status_3_Open = 0
+            valueB3(1)
+
         if status_4_Close == Timestep:
             print("4:Status_Laser_Shine")
-            status_4_Open = 0
+            valueB4(1)
