@@ -38,14 +38,14 @@ def valueB2(value):
     oscMsg = oscMsg.build()
     oscClient.send(oscMsg)
 
-def valueB3(value):
-    oscMsg = osc_message_builder.OscMessageBuilder(address="/Value_B3")
+def valueL1(value):
+    oscMsg = osc_message_builder.OscMessageBuilder(address="/Value_L1")
     oscMsg.add_arg(value)
     oscMsg = oscMsg.build()
     oscClient.send(oscMsg)
 
-def valueB4(value):
-    oscMsg = osc_message_builder.OscMessageBuilder(address="/Value_B4")
+def valueL2(value):
+    oscMsg = osc_message_builder.OscMessageBuilder(address="/Value_L2")
     oscMsg.add_arg(value)
     oscMsg = oscMsg.build()
     oscClient.send(oscMsg)
