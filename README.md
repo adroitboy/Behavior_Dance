@@ -1,4 +1,4 @@
-# Behavior_Dance
+# Behavior Dance
 
 This is a interactive music project, the dancer triggers different sensors, there will be different music. In this project. Based on UDP, we use python3.5 to connect the hardware with the  Max7 music software. 
 
