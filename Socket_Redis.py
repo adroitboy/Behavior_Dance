@@ -32,7 +32,7 @@ def clientthread(conn,ipaddr):
         data = conn.recv(Bufsiz)
         # reply = 'OK...' + data
         # conn.sendall(reply)
-        client.rpush(ipaddr,data)
+        client.rpush(ipaddr, data)
         #print(ipaddr)
         print(data)
         if not data:
